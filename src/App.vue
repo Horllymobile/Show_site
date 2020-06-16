@@ -1,10 +1,17 @@
 <template>
   <div>
-      <comp-home/>
+
+    <comp-header/>
+
+    <router-view class="main"></router-view>
+
+    <comp-footer />
+      
   </div>
 </template>
 <script>
-import compHome from './components/Home/Home.vue';
+import compHeader from './components/Header_Footer/Header';
+import compFooter from './components/Header_Footer/Footer';
 export default {
   data(){
     return {
@@ -12,7 +19,8 @@ export default {
     }
   },
   components:{
-    compHome
+    compHeader,
+    compFooter
   }
 }
 </script>

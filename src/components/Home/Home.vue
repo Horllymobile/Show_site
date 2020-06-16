@@ -1,23 +1,25 @@
 <template>
-    <div>
-        <compHeader />
-            
-        <compFooter />
+    <div class="container mt-2">
+        <div class="row" v-for="(item, index) in posts" :key="index">
+
+            <div class="col-lg-3">
+                <img :src="item.picture" alt="" class="img-responsive movie-image" >
+                <h3>{{ item.title }}</h3>
+            </div>
+
+        </div>
     </div>
 </template>
 <script>
-import compHeader from '../Header_Footer/Header.vue';
-import compFooter from '../Header_Footer/Footer.vue';
+import post from './../post/post.js';
 export default {
     data() {
         return {
+
+            posts:post
             
         }
     },
-    components:{
-        compHeader,
-        compFooter
-    }
 }
 </script>
 

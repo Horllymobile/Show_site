@@ -1,3 +1,29 @@
-/* .main{
+.main{
     min-height: calc(100vh - 56px - 88px) !important;
+}
+
+.list li{
+    display: inline-block !important;
+    padding: 5px;
+}
+
+.movie-image{
+    width: 150px !important;
+
+}
+
+.navbar-brand{
+    padding: 5px;
+}
+
+/* .list li{
+    flex: 0.2 0.2 200px;
 } */
+
+.copywrite{
+    text-align: center;
+}
+
+.active{
+    color: gold;
+}
