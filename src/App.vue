@@ -3,7 +3,9 @@
 
     <comp-header/>
 
-    <router-view class="main"></router-view>
+    <transition enter-class="trans">
+      <router-view class="main"></router-view>
+    </transition>
 
     <comp-footer />
       
@@ -24,3 +26,9 @@ export default {
   }
 }
 </script>
+<style lang="css" scope>
+  .trans{
+    transform: translate();
+    transition-delay: 10ms;
+  }
+</style>

@@ -7,9 +7,28 @@
     padding: 5px;
 }
 
+.font-weight-rating{
+    font-size:1em !important;
+}
+
+.description{
+    background:grey;
+    border-radius:5px;
+    min-width:100% !important;
+    min-height:20% !important;
+}
+
+.description-tag{
+    font-weight:bolder !important;
+}
+
 .movie-image{
     width: 150px !important;
+}
 
+.movie-container{
+    max-width: 100% !important;
+    max-height: 100vh !important;
 }
 
 .navbar-brand{
@@ -26,4 +45,40 @@
 
 .active{
     color: gold;
+}
+
+.other-images:hover{
+    box-shadow: 5px 5px 5px 10px grey;
+}
+.other-images:visited{
+    box-shadow: 5px 5px 5px 10px grey;
+}
+
+.current-img{
+    width: 100% !important;
+    height: 400px !important;
+}
+
+@media only screen and (max-width:768px){
+    .navbar-brand{
+        text-align: center !important;
+        font-size: 1em !important;
+        margin: 0 auto !important;
+    }
+    .title{
+        font-size: 1.8em !important;
+    }
+    .form{
+        margin: 100px auto !important;
+    }
+    /* nav{
+        
+    } */
+    .nav-list{
+        float: right !important;
+    }
+    .current-img{
+        width: 100% !important;
+        height: 200px;
+    }
 }
