@@ -7,11 +7,11 @@
                 <form action="" class="form">
                     <div class="form-group">
                         <label for="">Email</label>
-                        <input type="email" placeholder="Email" class="form-control" v-model="formData.email">
+                        <input type="email" placeholder="Email" class="form-control" v-model.trim="formData.email">
                     </div>
                     <div class="form-group">
                         <label for="">Password</label>
-                        <input type="password" placeholder="Password" class="form-control" v-model="formData.password">
+                        <input type="password" placeholder="Password" class="form-control" v-model.trim="formData.password">
                     </div>
 
                     <div class="form-group">
@@ -28,14 +28,18 @@ export default {
     data: function(){
         return{
             formData:{
-                email:'testmail@gmail.com',
+                email:'testing@mail.com',
                 password:'testing'
             }
         }
     },
     methods:{
         formHandler: function (){
-            console.log(this.formData)
+            if(this.formData.email === '' || this.formData.password === ''){
+                alert("All Fields are required ");
+            }else{
+                this.$store.dispatch('admin/login', this.formData);
+            }
         }
     }
 }

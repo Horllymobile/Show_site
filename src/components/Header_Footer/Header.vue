@@ -7,12 +7,35 @@
                 </div>
                 <div class="col-lg-6"></div>
                 <div class="col-lg-3">
-                    <ul class="list-unstyled list nav-list">
+                    <ul class="list-unstyled list nav-list" v-if="!isAuth">
                         <li><router-link to="/about" class="text-light">About</router-link></li>
                         <li><router-link to="/sign_in" class="text-light btn btn-success">Sign in</router-link></li>
+                    </ul>
+                    <ul class="list-unstyled list nav-list" v-if="isAuth">
+                        <li><router-link to="/dashboard" class="text-light">Dashboard</router-link></li>
+                        <li><button class="btn btn-warning text-light" @click="logoutUser()" >Logout</button></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data: function(){
+        return{
+        }
+    },
+    methods:{
+        logoutUser(){
+            this.$store.commit('admin/logoutUser');
+        }
+    },
+    computed:{
+        isAuth(){
+            return this.$store.getters['admin/isAuth'];
+        },
+    }
+}
+</script>

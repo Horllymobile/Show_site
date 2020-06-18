@@ -23,7 +23,10 @@ export default {
   components:{
     compHeader,
     compFooter
-  }
+  },
+ created(){
+   this.$store.dispatch('admin/refreshToken');
+ }
 }
 </script>
 <style lang="css" scope>
