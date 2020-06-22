@@ -53,6 +53,10 @@
     box-shadow: 5px 5px 5px 10px grey;
 }
 
+.side-dash-board{
+    min-height: 550px !important;
+}
+
 .current-img{
     width: 100% !important;
     height: 400px !important;

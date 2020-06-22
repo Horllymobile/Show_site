@@ -4,7 +4,13 @@
             <div class="col-lg-3 col-sm-12 movie-container mt-2" v-for="(item, index) in posts" :key="index" >
                 <div class="card rounded">
                     <div class="card-head">
-                        <img :src="item.picture[0]" alt="" width="100%" height="200px">
+
+                        <carousel :perPage="1" :autoplay="true" :autoplayTimeout='3000' :loop='true' :centerMode="true"  :paginationEnabled="false">
+                                <slide v-for="(image, index) in item.picture" :key="index">
+                                    <img :src="image" alt="" width="100%" height="200px">
+                                </slide>
+                        </carousel>
+                        <!-- <img :src="item.picture[0]" alt="" width="100%" height="200px"> -->
                     </div>
                     <div class="card-body">
                         <div class="card-title">

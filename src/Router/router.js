@@ -46,7 +46,7 @@ let routes = [
     // Public
     {path: "/", component: Home, name:"home" },
     {path: "/about", component: About, name:"about" },
-    {path: "/sign_in", component: Signin, name:"sgin_in", ...authGuard},
+    {path: "/signin", component: Signin, name:"sginin", ...authGuard},
     {path: "/details:position", component: Details, name:"details" },
 
     // Private
